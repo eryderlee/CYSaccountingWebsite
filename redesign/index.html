@@ -1,0 +1,483 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>CYS Accountants — Tax, Accounting & Business Services | Gold Coast & Brisbane</title>
+  <meta name="description" content="CYS Accountants specialises in tax, accounting and business services for small to medium-sized businesses in the Gold Coast and Brisbane.">
+
+  <!-- Fonts -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;600;700&family=Roboto:wght@300;400;500;700&display=swap" rel="stylesheet">
+
+  <!-- Icons -->
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css">
+
+  <link rel="stylesheet" href="style.css">
+</head>
+
+<body class="is-loading">
+
+  <!-- ═══════════════════════════════════════════
+       PRELOADER
+  ═══════════════════════════════════════════ -->
+  <div id="preloader" aria-hidden="true">
+    <img src="assets/cysaccounts_logo.png" alt="CYS Accountants" class="preloader__logo">
+  </div>
+
+  <!-- ═══════════════════════════════════════════
+       SCROLL PROGRESS BAR
+  ═══════════════════════════════════════════ -->
+  <div id="scroll-progress" aria-hidden="true"></div>
+
+  <!-- ═══════════════════════════════════════════
+       CUSTOM CURSOR (desktop only)
+  ═══════════════════════════════════════════ -->
+  <div id="cursor-dot"  aria-hidden="true"></div>
+  <div id="cursor-ring" aria-hidden="true"></div>
+
+  <!-- ═══════════════════════════════════════════
+       NAVIGATION
+  ═══════════════════════════════════════════ -->
+  <header id="site-header" class="site-header site-header--transparent">
+    <div class="nav-inner">
+
+      <a href="#hero" class="nav-logo" aria-label="CYS Accountants — home">
+        <img src="assets/cysaccounts_logo.png" alt="CYS Accountants" class="nav-logo__img">
+      </a>
+
+      <button class="nav-hamburger" id="nav-hamburger" aria-label="Open menu" aria-expanded="false" aria-controls="nav-menu">
+        <span class="nav-hamburger__bar"></span>
+        <span class="nav-hamburger__bar"></span>
+        <span class="nav-hamburger__bar"></span>
+      </button>
+
+      <nav class="nav-menu" id="nav-menu" aria-label="Primary navigation">
+        <ul class="nav-list">
+          <li class="nav-item"><a href="#hero"     class="nav-link">Home</a></li>
+          <li class="nav-item"><a href="#services" class="nav-link">Services</a></li>
+          <li class="nav-item"><a href="#about"    class="nav-link">About Us</a></li>
+          <li class="nav-item"><a href="#contact"  class="nav-link">Contact</a></li>
+        </ul>
+      </nav>
+
+    </div>
+  </header>
+
+  <main id="main">
+
+    <!-- ═══════════════════════════════════════════
+         HERO
+    ═══════════════════════════════════════════ -->
+    <section id="hero" class="section-hero">
+
+      <!-- Video background (src set by JS if hero.mp4 exists) -->
+      <div class="hero-media" aria-hidden="true">
+        <video class="hero-video" autoplay muted loop playsinline poster="assets/hero1.jpg"></video>
+        <!-- Slideshow fallback -->
+        <div class="hero-slideshow">
+          <div class="hero-slide is-active" style="background-image:url('assets/hero1.jpg')"></div>
+          <div class="hero-slide" style="background-image:url('assets/hero2.jpg')"></div>
+          <div class="hero-slide" style="background-image:url('assets/hero3.jpg')"></div>
+          <div class="hero-slide" style="background-image:url('assets/hero4.jpg')"></div>
+        </div>
+      </div>
+
+      <div class="hero-overlay" aria-hidden="true"></div>
+
+      <!-- Main content -->
+      <div class="hero-content">
+        <span class="hero-eyebrow reveal-up">Gold Coast &amp; Brisbane</span>
+        <h1 class="hero-title reveal-up reveal-up--d1">CYS Accountants</h1>
+        <p class="hero-subtitle reveal-up reveal-up--d2">Specialising in tax, accounting and business services<br>for small to medium-sized businesses</p>
+        <a href="#contact" class="btn-hero reveal-up reveal-up--d3">Get In Touch</a>
+      </div>
+
+      <!-- Stats bar -->
+      <div class="hero-stats reveal-up reveal-up--d4" aria-label="Key statistics">
+        <div class="hero-stat">
+          <span class="hero-stat__number">200+</span>
+          <span class="hero-stat__label">Clients Served</span>
+        </div>
+        <div class="hero-stat__divider" aria-hidden="true"></div>
+        <div class="hero-stat">
+          <span class="hero-stat__number">10+</span>
+          <span class="hero-stat__label">Years Experience</span>
+        </div>
+        <div class="hero-stat__divider" aria-hidden="true"></div>
+        <div class="hero-stat">
+          <span class="hero-stat__number">24h</span>
+          <span class="hero-stat__label">Response Time</span>
+        </div>
+        <div class="hero-stat__divider" aria-hidden="true"></div>
+        <div class="hero-stat">
+          <span class="hero-stat__number">5.0</span>
+          <span class="hero-stat__label">Google Rating</span>
+        </div>
+      </div>
+
+    </section>
+
+    <!-- ═══════════════════════════════════════════
+         SERVICES
+    ═══════════════════════════════════════════ -->
+    <section id="services" class="section-services">
+      <div class="container">
+
+        <div class="section-header js-reveal">
+          <span class="section-eyebrow">What We Do</span>
+          <h2 class="section-title">Our Services</h2>
+        </div>
+
+        <div class="services-grid">
+
+          <div class="service-card js-reveal" data-delay="0">
+            <div class="service-card__icon" aria-hidden="true"><i class="far fa-bookmark"></i></div>
+            <div class="service-card__body">
+              <h3 class="service-card__title">Business Advisory &amp; Tax Compliance</h3>
+              <p class="service-card__text">We can help you plan, navigate and understand the accounting requirements and tax obligations. This includes business structure, GST, BAS, Payroll, PAYG, Superannuation and financial reporting.</p>
+            </div>
+          </div>
+
+          <div class="service-card js-reveal" data-delay="100">
+            <div class="service-card__icon" aria-hidden="true"><i class="far fa-user"></i></div>
+            <div class="service-card__body">
+              <h3 class="service-card__title">Income Tax Return</h3>
+              <p class="service-card__text">We can assist you in preparing and lodging your income tax return correctly to the Australian Taxation Office. We help businesses and individuals with their simple and complex tax returns.</p>
+            </div>
+          </div>
+
+          <div class="service-card js-reveal" data-delay="200">
+            <div class="service-card__icon" aria-hidden="true"><i class="far fa-building"></i></div>
+            <div class="service-card__body">
+              <h3 class="service-card__title">Corporate Compliance</h3>
+              <p class="service-card__text">We can assist your business with corporate compliance matters including ASIC compliance requirements, all registered office matters, corporate register and liaise with ASIC on your behalf.</p>
+            </div>
+          </div>
+
+          <div class="service-card js-reveal" data-delay="300">
+            <div class="service-card__icon" aria-hidden="true"><i class="fas fa-pencil-alt"></i></div>
+            <div class="service-card__body">
+              <h3 class="service-card__title">Bookkeeping Services</h3>
+              <p class="service-card__text">We are Xero certified, QuickBooks Pro Advisors and MYOB experts. Our team is trained in all areas of bookkeeping and process implementation for businesses of all sizes.</p>
+            </div>
+          </div>
+
+        </div>
+      </div>
+    </section>
+
+    <!-- ═══════════════════════════════════════════
+         ABOUT
+    ═══════════════════════════════════════════ -->
+    <section id="about" class="section-about">
+      <div class="about-bg" aria-hidden="true"></div>
+      <div class="about-overlay" aria-hidden="true"></div>
+
+      <div class="container">
+
+        <div class="section-header section-header--light js-reveal">
+          <span class="section-eyebrow section-eyebrow--teal">Our Story</span>
+          <h2 class="section-title section-title--white">About Us</h2>
+        </div>
+
+        <div class="about-body js-reveal">
+          <p>We are a team of friendly, experienced accounting specialists with vast experience in tax accounting for individuals and businesses in various industries.</p>
+          <p>Our tax Accountants and Tax Consultants are highly qualified from Australian universities and are passionate individuals with a drive and a will to help you with your tax related matters.</p>
+          <p>We are dedicated to ensure that your requirements are strategically planned and aligned with your long-term goals.</p>
+        </div>
+
+        <div class="credentials-grid">
+          <div class="credential-card js-reveal" data-delay="0">
+            <img src="assets/ca_cpa.jpg" alt="CA and CPA Qualified" class="credential-card__img" loading="lazy">
+            <p class="credential-card__label">CA &amp; CPA</p>
+          </div>
+          <div class="credential-card js-reveal" data-delay="150">
+            <img src="assets/tax_inst.jpg" alt="The Tax Institute" class="credential-card__img" loading="lazy">
+            <p class="credential-card__label">The Tax Institute</p>
+          </div>
+          <div class="credential-card js-reveal" data-delay="300">
+            <img src="assets/acc_software.jpg" alt="Software Partners" class="credential-card__img" loading="lazy">
+            <p class="credential-card__label">Partners</p>
+          </div>
+        </div>
+
+      </div>
+    </section>
+
+    <!-- ═══════════════════════════════════════════
+         REVIEWS
+    ═══════════════════════════════════════════ -->
+    <section id="reviews" class="section-reviews">
+      <div class="container">
+
+        <div class="section-header js-reveal">
+          <span class="section-eyebrow">Client Feedback</span>
+          <h2 class="section-title">What Our Clients Say</h2>
+        </div>
+
+        <!-- Rating badge -->
+        <div class="reviews-badge js-reveal">
+          <!-- Google G logo -->
+          <svg class="reviews-badge__g" width="20" height="20" viewBox="0 0 24 24" aria-hidden="true">
+            <path d="M22.56 12.25c0-.78-.07-1.53-.2-2.25H12v4.26h5.92c-.26 1.37-1.04 2.53-2.21 3.31v2.77h3.57c2.08-1.92 3.28-4.74 3.28-8.09z" fill="#4285F4"/>
+            <path d="M12 23c2.97 0 5.46-.98 7.28-2.66l-3.57-2.77c-.98.66-2.23 1.06-3.71 1.06-2.86 0-5.29-1.93-6.16-4.53H2.18v2.84C3.99 20.53 7.7 23 12 23z" fill="#34A853"/>
+            <path d="M5.84 14.09c-.22-.66-.35-1.36-.35-2.09s.13-1.43.35-2.09V7.07H2.18C1.43 8.55 1 10.22 1 12s.43 3.45 1.18 4.93l3.66-2.84z" fill="#FBBC05"/>
+            <path d="M12 5.38c1.62 0 3.06.56 4.21 1.64l3.15-3.15C17.45 2.09 14.97 1 12 1 7.7 1 3.99 3.47 2.18 7.07l3.66 2.84c.87-2.6 3.3-4.53 6.16-4.53z" fill="#EA4335"/>
+          </svg>
+          <span class="reviews-badge__stars" aria-label="5 stars">★★★★★</span>
+          <span class="reviews-badge__score">5.0</span>
+          <span class="reviews-badge__label">Google Reviews</span>
+        </div>
+
+      </div>
+
+      <!-- Carousel (full-width, outside .container for edge bleed) -->
+      <div class="reviews-carousel" aria-label="Client reviews" role="region">
+        <div class="reviews-track" id="reviews-track">
+
+          <article class="review-card">
+            <div class="review-card__header">
+              <div class="review-card__avatar" aria-hidden="true">S</div>
+              <div class="review-card__meta">
+                <p class="review-card__name">Sarah M.</p>
+                <p class="review-card__date">March 2025</p>
+              </div>
+              <svg class="review-card__g" width="16" height="16" viewBox="0 0 24 24" aria-hidden="true"><path d="M22.56 12.25c0-.78-.07-1.53-.2-2.25H12v4.26h5.92c-.26 1.37-1.04 2.53-2.21 3.31v2.77h3.57c2.08-1.92 3.28-4.74 3.28-8.09z" fill="#4285F4"/><path d="M12 23c2.97 0 5.46-.98 7.28-2.66l-3.57-2.77c-.98.66-2.23 1.06-3.71 1.06-2.86 0-5.29-1.93-6.16-4.53H2.18v2.84C3.99 20.53 7.7 23 12 23z" fill="#34A853"/><path d="M5.84 14.09c-.22-.66-.35-1.36-.35-2.09s.13-1.43.35-2.09V7.07H2.18C1.43 8.55 1 10.22 1 12s.43 3.45 1.18 4.93l3.66-2.84z" fill="#FBBC05"/><path d="M12 5.38c1.62 0 3.06.56 4.21 1.64l3.15-3.15C17.45 2.09 14.97 1 12 1 7.7 1 3.99 3.47 2.18 7.07l3.66 2.84c.87-2.6 3.3-4.53 6.16-4.53z" fill="#EA4335"/></svg>
+            </div>
+            <div class="review-card__stars" aria-label="5 out of 5 stars">★★★★★</div>
+            <p class="review-card__text">"The team at CYS made our tax return completely seamless. Professional, responsive and genuinely helpful — couldn't recommend more highly."</p>
+          </article>
+
+          <article class="review-card">
+            <div class="review-card__header">
+              <div class="review-card__avatar" aria-hidden="true">J</div>
+              <div class="review-card__meta">
+                <p class="review-card__name">James T.</p>
+                <p class="review-card__date">January 2025</p>
+              </div>
+              <svg class="review-card__g" width="16" height="16" viewBox="0 0 24 24" aria-hidden="true"><path d="M22.56 12.25c0-.78-.07-1.53-.2-2.25H12v4.26h5.92c-.26 1.37-1.04 2.53-2.21 3.31v2.77h3.57c2.08-1.92 3.28-4.74 3.28-8.09z" fill="#4285F4"/><path d="M12 23c2.97 0 5.46-.98 7.28-2.66l-3.57-2.77c-.98.66-2.23 1.06-3.71 1.06-2.86 0-5.29-1.93-6.16-4.53H2.18v2.84C3.99 20.53 7.7 23 12 23z" fill="#34A853"/><path d="M5.84 14.09c-.22-.66-.35-1.36-.35-2.09s.13-1.43.35-2.09V7.07H2.18C1.43 8.55 1 10.22 1 12s.43 3.45 1.18 4.93l3.66-2.84z" fill="#FBBC05"/><path d="M12 5.38c1.62 0 3.06.56 4.21 1.64l3.15-3.15C17.45 2.09 14.97 1 12 1 7.7 1 3.99 3.47 2.18 7.07l3.66 2.84c.87-2.6 3.3-4.53 6.16-4.53z" fill="#EA4335"/></svg>
+            </div>
+            <div class="review-card__stars" aria-label="5 out of 5 stars">★★★★★</div>
+            <p class="review-card__text">"Fantastic business advisory service. CYS helped us restructure our business and significantly reduce our tax burden. Highly knowledgeable team."</p>
+          </article>
+
+          <article class="review-card">
+            <div class="review-card__header">
+              <div class="review-card__avatar" aria-hidden="true">M</div>
+              <div class="review-card__meta">
+                <p class="review-card__name">Michelle K.</p>
+                <p class="review-card__date">February 2025</p>
+              </div>
+              <svg class="review-card__g" width="16" height="16" viewBox="0 0 24 24" aria-hidden="true"><path d="M22.56 12.25c0-.78-.07-1.53-.2-2.25H12v4.26h5.92c-.26 1.37-1.04 2.53-2.21 3.31v2.77h3.57c2.08-1.92 3.28-4.74 3.28-8.09z" fill="#4285F4"/><path d="M12 23c2.97 0 5.46-.98 7.28-2.66l-3.57-2.77c-.98.66-2.23 1.06-3.71 1.06-2.86 0-5.29-1.93-6.16-4.53H2.18v2.84C3.99 20.53 7.7 23 12 23z" fill="#34A853"/><path d="M5.84 14.09c-.22-.66-.35-1.36-.35-2.09s.13-1.43.35-2.09V7.07H2.18C1.43 8.55 1 10.22 1 12s.43 3.45 1.18 4.93l3.66-2.84z" fill="#FBBC05"/><path d="M12 5.38c1.62 0 3.06.56 4.21 1.64l3.15-3.15C17.45 2.09 14.97 1 12 1 7.7 1 3.99 3.47 2.18 7.07l3.66 2.84c.87-2.6 3.3-4.53 6.16-4.53z" fill="#EA4335"/></svg>
+            </div>
+            <div class="review-card__stars" aria-label="5 out of 5 stars">★★★★★</div>
+            <p class="review-card__text">"Exceptional bookkeeping service. They set us up on Xero and now our accounts run like clockwork. Saved us hours every month."</p>
+          </article>
+
+          <article class="review-card">
+            <div class="review-card__header">
+              <div class="review-card__avatar" aria-hidden="true">D</div>
+              <div class="review-card__meta">
+                <p class="review-card__name">David L.</p>
+                <p class="review-card__date">December 2024</p>
+              </div>
+              <svg class="review-card__g" width="16" height="16" viewBox="0 0 24 24" aria-hidden="true"><path d="M22.56 12.25c0-.78-.07-1.53-.2-2.25H12v4.26h5.92c-.26 1.37-1.04 2.53-2.21 3.31v2.77h3.57c2.08-1.92 3.28-4.74 3.28-8.09z" fill="#4285F4"/><path d="M12 23c2.97 0 5.46-.98 7.28-2.66l-3.57-2.77c-.98.66-2.23 1.06-3.71 1.06-2.86 0-5.29-1.93-6.16-4.53H2.18v2.84C3.99 20.53 7.7 23 12 23z" fill="#34A853"/><path d="M5.84 14.09c-.22-.66-.35-1.36-.35-2.09s.13-1.43.35-2.09V7.07H2.18C1.43 8.55 1 10.22 1 12s.43 3.45 1.18 4.93l3.66-2.84z" fill="#FBBC05"/><path d="M12 5.38c1.62 0 3.06.56 4.21 1.64l3.15-3.15C17.45 2.09 14.97 1 12 1 7.7 1 3.99 3.47 2.18 7.07l3.66 2.84c.87-2.6 3.3-4.53 6.16-4.53z" fill="#EA4335"/></svg>
+            </div>
+            <div class="review-card__stars" aria-label="5 out of 5 stars">★★★★★</div>
+            <p class="review-card__text">"CYS handled all our ASIC compliance and corporate secretarial work. Everything was done accurately and on time. Great peace of mind."</p>
+          </article>
+
+          <article class="review-card">
+            <div class="review-card__header">
+              <div class="review-card__avatar" aria-hidden="true">P</div>
+              <div class="review-card__meta">
+                <p class="review-card__name">Priya S.</p>
+                <p class="review-card__date">November 2024</p>
+              </div>
+              <svg class="review-card__g" width="16" height="16" viewBox="0 0 24 24" aria-hidden="true"><path d="M22.56 12.25c0-.78-.07-1.53-.2-2.25H12v4.26h5.92c-.26 1.37-1.04 2.53-2.21 3.31v2.77h3.57c2.08-1.92 3.28-4.74 3.28-8.09z" fill="#4285F4"/><path d="M12 23c2.97 0 5.46-.98 7.28-2.66l-3.57-2.77c-.98.66-2.23 1.06-3.71 1.06-2.86 0-5.29-1.93-6.16-4.53H2.18v2.84C3.99 20.53 7.7 23 12 23z" fill="#34A853"/><path d="M5.84 14.09c-.22-.66-.35-1.36-.35-2.09s.13-1.43.35-2.09V7.07H2.18C1.43 8.55 1 10.22 1 12s.43 3.45 1.18 4.93l3.66-2.84z" fill="#FBBC05"/><path d="M12 5.38c1.62 0 3.06.56 4.21 1.64l3.15-3.15C17.45 2.09 14.97 1 12 1 7.7 1 3.99 3.47 2.18 7.07l3.66 2.84c.87-2.6 3.3-4.53 6.16-4.53z" fill="#EA4335"/></svg>
+            </div>
+            <div class="review-card__stars" aria-label="5 out of 5 stars">★★★★★</div>
+            <p class="review-card__text">"I had a complex tax situation with investments and rental properties. The CYS team navigated it all with expertise and clarity. Very impressed."</p>
+          </article>
+
+          <article class="review-card">
+            <div class="review-card__header">
+              <div class="review-card__avatar" aria-hidden="true">A</div>
+              <div class="review-card__meta">
+                <p class="review-card__name">Andrew B.</p>
+                <p class="review-card__date">October 2024</p>
+              </div>
+              <svg class="review-card__g" width="16" height="16" viewBox="0 0 24 24" aria-hidden="true"><path d="M22.56 12.25c0-.78-.07-1.53-.2-2.25H12v4.26h5.92c-.26 1.37-1.04 2.53-2.21 3.31v2.77h3.57c2.08-1.92 3.28-4.74 3.28-8.09z" fill="#4285F4"/><path d="M12 23c2.97 0 5.46-.98 7.28-2.66l-3.57-2.77c-.98.66-2.23 1.06-3.71 1.06-2.86 0-5.29-1.93-6.16-4.53H2.18v2.84C3.99 20.53 7.7 23 12 23z" fill="#34A853"/><path d="M5.84 14.09c-.22-.66-.35-1.36-.35-2.09s.13-1.43.35-2.09V7.07H2.18C1.43 8.55 1 10.22 1 12s.43 3.45 1.18 4.93l3.66-2.84z" fill="#FBBC05"/><path d="M12 5.38c1.62 0 3.06.56 4.21 1.64l3.15-3.15C17.45 2.09 14.97 1 12 1 7.7 1 3.99 3.47 2.18 7.07l3.66 2.84c.87-2.6 3.3-4.53 6.16-4.53z" fill="#EA4335"/></svg>
+            </div>
+            <div class="review-card__stars" aria-label="5 out of 5 stars">★★★★★</div>
+            <p class="review-card__text">"Switched to CYS two years ago and haven't looked back. Friendly, thorough and always available when I need them. Genuinely feel like valued clients."</p>
+          </article>
+
+        </div>
+      </div>
+    </section>
+
+    <!-- ═══════════════════════════════════════════
+         CONTACT
+    ═══════════════════════════════════════════ -->
+    <section id="contact" class="section-contact">
+      <div class="container">
+
+        <div class="section-header js-reveal">
+          <span class="section-eyebrow">Get In Touch</span>
+          <h2 class="section-title">Contact Us</h2>
+        </div>
+
+        <div class="contact-layout">
+
+          <!-- Info panel -->
+          <div class="contact-info js-reveal">
+            <p class="contact-info__lead">Have a question or ready to get started? We'd love to hear from you.</p>
+
+            <ul class="contact-details" aria-label="Contact details">
+              <li class="contact-detail">
+                <span class="contact-detail__icon" aria-hidden="true"><i class="fas fa-map-marker-alt"></i></span>
+                <div class="contact-detail__text">
+                  <strong>Address</strong>
+                  <span>Level 8, Suite 1808/56 Scarborough St<br>SPC Commercial Tower 1, Southport QLD 4215</span>
+                </div>
+              </li>
+              <li class="contact-detail">
+                <span class="contact-detail__icon" aria-hidden="true"><i class="fas fa-map-pin"></i></span>
+                <div class="contact-detail__text">
+                  <strong>Postal</strong>
+                  <span>PO Box 3280, Australia Fair QLD 4215</span>
+                </div>
+              </li>
+              <li class="contact-detail">
+                <span class="contact-detail__icon" aria-hidden="true"><i class="fas fa-phone"></i></span>
+                <div class="contact-detail__text">
+                  <strong>Phone</strong>
+                  <a href="tel:+61755030366">(+61 7) 5503 0366</a>
+                </div>
+              </li>
+              <li class="contact-detail">
+                <span class="contact-detail__icon" aria-hidden="true"><i class="far fa-envelope"></i></span>
+                <div class="contact-detail__text">
+                  <strong>Email</strong>
+                  <a href="mailto:info@cysaccountants.com">info@cysaccountants.com</a>
+                </div>
+              </li>
+              <li class="contact-detail">
+                <span class="contact-detail__icon" aria-hidden="true"><i class="far fa-clock"></i></span>
+                <div class="contact-detail__text">
+                  <strong>Business Hours</strong>
+                  <span>Mon–Fri: 9:00am – 5:00pm</span>
+                </div>
+              </li>
+            </ul>
+
+            <div class="contact-partner-logo">
+              <img src="assets/Logo11.png" alt="Software partner logos" loading="lazy">
+            </div>
+          </div>
+
+          <!-- Form -->
+          <div class="contact-form-wrap js-reveal" data-delay="150">
+            <form id="contact-form" class="contact-form" novalidate aria-label="Contact form">
+
+              <div class="form-row form-row--two">
+                <div class="form-field">
+                  <label for="field-name" class="form-label">Full Name <span class="form-required" aria-hidden="true">*</span></label>
+                  <input type="text" id="field-name" name="name" class="form-input" placeholder="Jane Smith" required autocomplete="name">
+                </div>
+                <div class="form-field">
+                  <label for="field-email" class="form-label">Email Address <span class="form-required" aria-hidden="true">*</span></label>
+                  <input type="email" id="field-email" name="email" class="form-input" placeholder="jane@example.com" required autocomplete="email">
+                </div>
+              </div>
+
+              <div class="form-row form-row--two">
+                <div class="form-field">
+                  <label for="field-phone" class="form-label">Phone <span class="form-required" aria-hidden="true">*</span></label>
+                  <input type="tel" id="field-phone" name="phone" class="form-input" placeholder="07 xxxx xxxx" required autocomplete="tel">
+                </div>
+                <div class="form-field">
+                  <label for="field-subject" class="form-label">Subject</label>
+                  <input type="text" id="field-subject" name="subject" class="form-input" placeholder="Tax return enquiry">
+                </div>
+              </div>
+
+              <div class="form-row">
+                <div class="form-field">
+                  <label for="field-message" class="form-label">Message</label>
+                  <textarea id="field-message" name="message" class="form-input form-input--textarea" rows="5" placeholder="Tell us about your needs..."></textarea>
+                </div>
+              </div>
+
+              <div class="form-footer">
+                <button type="submit" class="btn-submit" id="btn-submit">
+                  <span class="btn-submit__text">Send Message</span>
+                  <span class="btn-submit__arrow" aria-hidden="true">→</span>
+                </button>
+                <p class="form-privacy">
+                  <i class="fas fa-lock" aria-hidden="true"></i>
+                  Your information is kept strictly confidential.
+                </p>
+              </div>
+
+              <div id="form-feedback" class="form-feedback" aria-live="polite" role="status"></div>
+
+            </form>
+          </div>
+
+        </div>
+      </div>
+    </section>
+
+  </main>
+
+  <!-- ═══════════════════════════════════════════
+       FOOTER
+  ═══════════════════════════════════════════ -->
+  <footer id="site-footer" class="site-footer">
+    <div class="footer-inner container">
+
+      <div class="footer-brand">
+        <img src="assets/cysaccounts_logo.png" alt="CYS Accountants" class="footer-logo" loading="lazy">
+        <p class="footer-tagline">Tax, accounting and business services<br>for Gold Coast &amp; Brisbane.</p>
+      </div>
+
+      <div class="footer-col">
+        <p class="footer-col__heading">Navigation</p>
+        <ul class="footer-nav">
+          <li><a href="#hero">Home</a></li>
+          <li><a href="#services">Services</a></li>
+          <li><a href="#about">About Us</a></li>
+          <li><a href="#contact">Contact</a></li>
+        </ul>
+      </div>
+
+      <div class="footer-col">
+        <p class="footer-col__heading">Contact</p>
+        <ul class="footer-contact-list">
+          <li><a href="tel:+61755030366">(+61 7) 5503 0366</a></li>
+          <li><a href="mailto:info@cysaccountants.com">info@cysaccountants.com</a></li>
+          <li>Southport QLD 4215</li>
+          <li>Mon–Fri: 9am – 5pm</li>
+        </ul>
+      </div>
+
+    </div>
+    <div class="footer-base">
+      <div class="container">
+        <p>&copy; 2025 CYS Accountants. All rights reserved.</p>
+      </div>
+    </div>
+  </footer>
+
+  <!-- Scroll to top -->
+  <button id="scroll-top" aria-label="Back to top" title="Back to top">
+    <i class="fas fa-chevron-up" aria-hidden="true"></i>
+  </button>
+
+  <script src="script.js"></script>
+</body>
+</html>
