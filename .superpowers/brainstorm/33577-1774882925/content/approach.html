@@ -1,0 +1,68 @@
+<h2>Which animation approach for the hero?</h2>
+<p class="subtitle">The building photo is strong. Here are 3 ways to bring it to life with Kling.</p>
+
+<div class="options">
+
+  <div class="option" data-choice="a" onclick="toggleSelect(this)">
+    <div class="letter">A</div>
+    <div class="content">
+      <h3>Single Image → Video Prompt</h3>
+      <p>Feed your building photo directly into Kling as a single start frame, then describe the motion in the prompt. Kling animates from that image forward.</p>
+      <div class="pros-cons">
+        <div class="pros"><h4>Pros</h4><ul>
+          <li>Fastest — no image generation step</li>
+          <li>Most creative freedom in prompt</li>
+          <li>Birds, clouds, wind all described in text</li>
+        </ul></div>
+        <div class="cons"><h4>Cons</h4><ul>
+          <li>Less control over end state</li>
+          <li>Motion can be unpredictable</li>
+          <li>No guaranteed seamless loop</li>
+        </ul></div>
+      </div>
+    </div>
+  </div>
+
+  <div class="option" data-choice="b" onclick="toggleSelect(this)">
+    <div class="letter">B</div>
+    <div class="content">
+      <h3>Start Frame + Generated End Frame (Nana Banana)</h3>
+      <p>Use your photo as the start frame. Generate a subtle end frame with Nana Banana (same scene, slight shift). Kling interpolates between the two for a smooth, controlled loop.</p>
+      <div class="pros-cons">
+        <div class="pros"><h4>Pros</h4><ul>
+          <li>Most predictable output</li>
+          <li>Seamless loop guaranteed</li>
+          <li>Full control over start and end</li>
+        </ul></div>
+        <div class="cons"><h4>Cons</h4><ul>
+          <li>Extra step (Nana Banana generation)</li>
+          <li>End frame must closely match photo style</li>
+          <li>Birds/organic motion harder to control</li>
+        </ul></div>
+      </div>
+    </div>
+  </div>
+
+  <div class="option" data-choice="c" onclick="toggleSelect(this)">
+    <div class="letter">C</div>
+    <div class="content">
+      <h3>Edit Image First → Then Start + End Frames</h3>
+      <p>Use an AI image editor (Photoshop Generative Fill, Firefly, or similar) to add birds or clouds to your photo first. Then use that edited image as start frame and generate an end frame.</p>
+      <div class="pros-cons">
+        <div class="pros"><h4>Pros</h4><ul>
+          <li>Best of both worlds — precise composition + controlled motion</li>
+          <li>Birds/elements baked into the scene naturally</li>
+          <li>Seamless loop still achievable</li>
+        </ul></div>
+        <div class="cons"><h4>Cons</h4><ul>
+          <li>Most steps (edit → generate → video)</li>
+          <li>Editing quality depends on tool</li>
+          <li>More time investment</li>
+        </ul></div>
+      </div>
+    </div>
+  </div>
+
+</div>
+
+<p class="subtitle" style="margin-top:2rem">Click an option, or just tell me in the terminal which direction feels right.</p>

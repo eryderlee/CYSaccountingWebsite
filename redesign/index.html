@@ -77,10 +77,10 @@
         <video class="hero-video" autoplay muted loop playsinline poster="assets/hero1.jpg"></video>
         <!-- Slideshow fallback -->
         <div class="hero-slideshow">
-          <div class="hero-slide is-active" style="background-image:url('assets/hero1.jpg')"></div>
-          <div class="hero-slide" style="background-image:url('assets/hero2.jpg')"></div>
+          <div class="hero-slide <!-- is-active" style="background-image:url('assets/hero1.jpg')"></div>
+          <!--<div class="hero-slide" style="background-image:url('assets/hero2.jpg')"></div>
           <div class="hero-slide" style="background-image:url('assets/hero3.jpg')"></div>
-          <div class="hero-slide" style="background-image:url('assets/hero4.jpg')"></div>
+          <div class="hero-slide" style="background-image:url('assets/hero4.jpg')"></div>-->
         </div>
       </div>
 
@@ -123,6 +123,7 @@
          SERVICES
     ═══════════════════════════════════════════ -->
     <section id="services" class="section-services">
+      <div class="services-deco" aria-hidden="true"></div>
       <div class="container">
 
         <div class="section-header js-reveal">
@@ -177,31 +178,45 @@
 
       <div class="container">
 
-        <div class="section-header section-header--light js-reveal">
-          <span class="section-eyebrow section-eyebrow--teal">Our Story</span>
-          <h2 class="section-title section-title--white">About Us</h2>
-        </div>
+        <div class="about-layout">
 
-        <div class="about-body js-reveal">
+        <div class="about-left">
+          <div class="section-header section-header--light js-reveal">
+            <span class="section-eyebrow section-eyebrow--teal">Our Story</span>
+            <h2 class="section-title section-title--white">About Us</h2>
+          </div>
+
+          <div class="about-body js-reveal">
           <p>We are a team of friendly, experienced accounting specialists with vast experience in tax accounting for individuals and businesses in various industries.</p>
           <p>Our tax Accountants and Tax Consultants are highly qualified from Australian universities and are passionate individuals with a drive and a will to help you with your tax related matters.</p>
           <p>We are dedicated to ensure that your requirements are strategically planned and aligned with your long-term goals.</p>
+          </div><!-- /.about-body -->
+        </div><!-- /.about-left -->
+
+        <div class="credentials-strip">
+
+          <div class="credentials-row js-reveal" data-delay="0">
+            <p class="credentials-row__label">Qualified Members</p>
+            <div class="credentials-row__logos">
+              <div class="logo-pill"><img src="assets/logo-ca-anz.png"        alt="Chartered Accountants Australia + New Zealand" class="credential-logo" loading="lazy"></div>
+              <div class="logo-pill"><img src="assets/logo-cpa-australia.png" alt="CPA Australia"                                  class="credential-logo" loading="lazy"></div>
+              <div class="logo-pill"><img src="assets/logo-tax-institute.png" alt="The Tax Institute — Chartered Tax Adviser"      class="credential-logo" loading="lazy"></div>
+            </div>
+          </div>
+
+          <div class="credentials-row js-reveal" data-delay="120">
+            <p class="credentials-row__label">Software Partners</p>
+            <div class="credentials-row__logos credentials-row__logos--grid2">
+              <div class="logo-pill"><img src="assets/logo-myob.png"        alt="MYOB"              class="credential-logo" loading="lazy"></div>
+              <div class="logo-pill"><img src="assets/logo-xero.png"        alt="Xero"              class="credential-logo" loading="lazy"></div>
+              <div class="logo-pill"><img src="assets/logo-reckon.png"      alt="Reckon"            class="credential-logo" loading="lazy"></div>
+              <div class="logo-pill"><img src="assets/logo-quickbooks.png"  alt="Intuit QuickBooks" class="credential-logo" loading="lazy"></div>
+            </div>
+          </div>
+
         </div>
 
-        <div class="credentials-grid">
-          <div class="credential-card js-reveal" data-delay="0">
-            <img src="assets/ca_cpa.jpg" alt="CA and CPA Qualified" class="credential-card__img" loading="lazy">
-            <p class="credential-card__label">CA &amp; CPA</p>
-          </div>
-          <div class="credential-card js-reveal" data-delay="150">
-            <img src="assets/tax_inst.jpg" alt="The Tax Institute" class="credential-card__img" loading="lazy">
-            <p class="credential-card__label">The Tax Institute</p>
-          </div>
-          <div class="credential-card js-reveal" data-delay="300">
-            <img src="assets/acc_software.jpg" alt="Software Partners" class="credential-card__img" loading="lazy">
-            <p class="credential-card__label">Partners</p>
-          </div>
-        </div>
+        </div><!-- /.about-layout -->
 
       </div>
     </section>

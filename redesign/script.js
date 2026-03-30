@@ -151,6 +151,7 @@
           video.load();
           video.play().catch(function () {});
           if (slideshow) slideshow.style.display = 'none';
+          initVideoFadeLoop(video);
         } else {
           initHeroSlideshow();
         }
@@ -158,6 +159,24 @@
       .catch(function () {
         initHeroSlideshow();
       });
+  }
+
+  function initVideoFadeLoop(video) {
+    var FADE = 1; // seconds to fade in/out at loop point
+    function tick() {
+      if (video.duration) {
+        var remaining = video.duration - video.currentTime;
+        if (remaining < FADE) {
+          video.style.opacity = Math.max(0, remaining / FADE);
+        } else if (video.currentTime < FADE) {
+          video.style.opacity = Math.min(1, video.currentTime / FADE);
+        } else {
+          video.style.opacity = 1;
+        }
+      }
+      requestAnimationFrame(tick);
+    }
+    requestAnimationFrame(tick);
   }
 
   function initHeroSlideshow() {
