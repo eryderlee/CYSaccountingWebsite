@@ -1,0 +1,263 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Resources & Insights — Tax Tips & Business Guides | CYS Accountants</title>
+  <meta name="description" content="Stay informed with tax tips, business guides and accounting insights from the CYS Accountants team — helping Gold Coast and Brisbane businesses stay ahead.">
+
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;600;700&family=Roboto:wght@300;400;500;700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css">
+  <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+
+  <div id="scroll-progress" aria-hidden="true"></div>
+  <div id="cursor-dot"  aria-hidden="true"></div>
+  <div id="cursor-ring" aria-hidden="true"></div>
+
+  <header id="site-header" class="site-header site-header--solid">
+    <div class="nav-inner">
+      <a href="index.html" class="nav-logo" aria-label="CYS Accountants — home">
+        <img src="assets/cysaccounts_logo.png" alt="CYS Accountants" class="nav-logo__img">
+      </a>
+      <button class="nav-hamburger" id="nav-hamburger" aria-label="Open menu" aria-expanded="false" aria-controls="nav-menu">
+        <span class="nav-hamburger__bar"></span>
+        <span class="nav-hamburger__bar"></span>
+        <span class="nav-hamburger__bar"></span>
+      </button>
+      <nav class="nav-menu" id="nav-menu" aria-label="Primary navigation">
+        <ul class="nav-list">
+          <li class="nav-item"><a href="index.html"    class="nav-link">Home</a></li>
+          <li class="nav-item nav-item--has-dropdown">
+            <a href="services.html" class="nav-link nav-link--has-dropdown">Services <i class="fas fa-chevron-down nav-chevron" aria-hidden="true"></i></a>
+            <div class="nav-dropdown" role="menu">
+              <a href="services.html" class="nav-dropdown__item nav-dropdown__item--all" role="menuitem">All Services</a>
+              <div class="nav-dropdown__divider"></div>
+              <a href="service-business-advisory.html" class="nav-dropdown__item" role="menuitem">Business Advisory &amp; Tax</a>
+              <a href="service-tax-returns.html" class="nav-dropdown__item" role="menuitem">Income Tax Returns</a>
+              <a href="service-corporate-compliance.html" class="nav-dropdown__item" role="menuitem">Corporate Compliance</a>
+              <a href="service-bookkeeping.html" class="nav-dropdown__item" role="menuitem">Bookkeeping</a>
+            </div>
+          </li>
+          <li class="nav-item"><a href="about.html"   class="nav-link">About</a></li>
+          <li class="nav-item"><a href="blog.html"    class="nav-link">Blog</a></li>
+          <li class="nav-item"><a href="contact.html" class="nav-link">Contact</a></li>
+        </ul>
+        <a href="contact.html" class="nav-cta">Get In Touch →</a>
+      </nav>
+    </div>
+  </header>
+
+  <main id="main">
+
+    <!-- PAGE HERO -->
+    <section class="page-hero">
+      <div class="page-hero__bg" aria-hidden="true"></div>
+      <div class="page-hero__overlay" aria-hidden="true"></div>
+      <div class="page-hero__content">
+        <nav class="breadcrumb" aria-label="Breadcrumb">
+          <a href="index.html">Home</a>
+          <span class="breadcrumb__sep" aria-hidden="true">›</span>
+          <span>Blog</span>
+        </nav>
+        <span class="page-hero__eyebrow">Stay Informed</span>
+        <h1 class="page-hero__title">Resources &amp; Insights</h1>
+        <p class="page-hero__subtitle">Tax tips, business guides and accounting insights from our team.</p>
+      </div>
+    </section>
+
+    <!-- FILTER BAR -->
+    <div class="blog-filter-bar">
+      <div class="container">
+        <div class="blog-filter" role="group" aria-label="Filter articles by category">
+          <button class="blog-filter__btn is-active" data-filter="all">All</button>
+          <button class="blog-filter__btn" data-filter="tax-tips">Tax Tips</button>
+          <button class="blog-filter__btn" data-filter="business">Business</button>
+          <button class="blog-filter__btn" data-filter="guides">Guides &amp; Checklists</button>
+        </div>
+      </div>
+    </div>
+
+    <!-- FEATURED ARTICLE -->
+    <section class="blog-featured-section">
+      <div class="container">
+
+        <div class="section-header js-reveal">
+          <span class="section-eyebrow">Featured</span>
+          <h2 class="section-title">Latest Article</h2>
+        </div>
+
+        <div class="blog-featured js-reveal" data-category="tax-tips">
+          <div class="blog-featured__thumb" style="background-image:url('assets/blog-eofy.jpg');background-size:cover;background-position:center;" aria-hidden="true">
+          </div>
+          <div class="blog-featured__body">
+            <span class="blog-card__tag">Tax Tips</span>
+            <h3 class="blog-card__title">EOFY Tax Checklist for Small Businesses 2025</h3>
+            <p class="blog-card__excerpt">End of financial year is one of the most important times for small business owners. Use our comprehensive checklist to ensure you've captured every deduction, reconciled your accounts and lodged on time — so you can head into the new financial year with confidence.</p>
+            <div class="blog-card__meta">
+              <span><i class="far fa-calendar" aria-hidden="true"></i> 30 June 2025</span>
+              <a href="blog-eofy-checklist.html" class="blog-card__read-more">Read More →</a>
+            </div>
+          </div>
+        </div>
+
+      </div>
+    </section>
+
+    <!-- ARTICLE GRID -->
+    <section class="blog-articles-section" data-dots="light">
+      <div class="container">
+
+        <div class="section-header js-reveal">
+          <span class="section-eyebrow">All Articles</span>
+          <h2 class="section-title">From the Blog</h2>
+        </div>
+
+        <div class="blog-grid">
+
+          <article class="blog-card js-reveal" data-delay="0" data-category="guides">
+            <div class="blog-card__thumb" style="background-image:url('assets/blog-xero.jpg');background-size:cover;background-position:center;">
+            </div>
+            <div class="blog-card__body">
+              <span class="blog-card__tag">Guides</span>
+              <h3 class="blog-card__title">How to Set Up Xero for Your Business</h3>
+              <p class="blog-card__excerpt">A step-by-step walkthrough for getting your Xero account configured correctly from day one — chart of accounts, bank feeds, payroll and more.</p>
+              <div class="blog-card__meta">
+                <span><i class="far fa-calendar" aria-hidden="true"></i> 15 May 2025</span>
+                <a href="blog-xero-setup.html" class="blog-card__read-more">Read More →</a>
+              </div>
+            </div>
+          </article>
+
+          <article class="blog-card js-reveal" data-delay="100" data-category="tax-tips">
+            <div class="blog-card__thumb" style="background-image:url('assets/blog-bas.jpg');background-size:cover;background-position:center;">
+            </div>
+            <div class="blog-card__body">
+              <span class="blog-card__tag">Tax Tips</span>
+              <h3 class="blog-card__title">What Is BAS and When Do You Need to Lodge It?</h3>
+              <p class="blog-card__excerpt">Business Activity Statements can be confusing for new business owners. We break down exactly what BAS is, when it's due, and what happens if you miss a lodgement.</p>
+              <div class="blog-card__meta">
+                <span><i class="far fa-calendar" aria-hidden="true"></i> 28 Apr 2025</span>
+                <a href="blog-bas-guide.html" class="blog-card__read-more">Read More →</a>
+              </div>
+            </div>
+          </article>
+
+          <article class="blog-card js-reveal" data-delay="200" data-category="business">
+            <div class="blog-card__thumb" style="background-image:url('assets/blog-structure.jpg');background-size:cover;background-position:center;">
+            </div>
+            <div class="blog-card__body">
+              <span class="blog-card__tag">Business</span>
+              <h3 class="blog-card__title">Business Structuring: Sole Trader vs Company</h3>
+              <p class="blog-card__excerpt">Choosing the right business structure is one of the most important decisions you'll make. We compare the key differences, tax implications and liability considerations.</p>
+              <div class="blog-card__meta">
+                <span><i class="far fa-calendar" aria-hidden="true"></i> 10 Mar 2025</span>
+                <a href="blog-business-structure.html" class="blog-card__read-more">Read More →</a>
+              </div>
+            </div>
+          </article>
+
+          <article class="blog-card js-reveal" data-delay="0" data-category="business">
+            <div class="blog-card__thumb" style="background-image:url('assets/blog-asic.jpg');background-size:cover;background-position:center;">
+            </div>
+            <div class="blog-card__body">
+              <span class="blog-card__tag">Business</span>
+              <h3 class="blog-card__title">Understanding ASIC Compliance for Small Business</h3>
+              <p class="blog-card__excerpt">Many small business owners are unaware of their ASIC obligations until they receive a penalty notice. Here's what you need to know to stay compliant.</p>
+              <div class="blog-card__meta">
+                <span><i class="far fa-calendar" aria-hidden="true"></i> 20 Feb 2025</span>
+                <a href="blog-asic-compliance.html" class="blog-card__read-more">Read More →</a>
+              </div>
+            </div>
+          </article>
+
+          <article class="blog-card js-reveal" data-delay="100" data-category="guides">
+            <div class="blog-card__thumb" style="background-image:url('assets/blog-super.jpg');background-size:cover;background-position:center;">
+            </div>
+            <div class="blog-card__body">
+              <span class="blog-card__tag">Guides</span>
+              <h3 class="blog-card__title">Superannuation Changes You Need to Know for 2025</h3>
+              <p class="blog-card__excerpt">The super guarantee rate increased again in 2025. Here's a plain-English guide to the changes, what they mean for employers and employees, and how to stay compliant.</p>
+              <div class="blog-card__meta">
+                <span><i class="far fa-calendar" aria-hidden="true"></i> 5 Jan 2025</span>
+                <a href="blog-super-changes.html" class="blog-card__read-more">Read More →</a>
+              </div>
+            </div>
+          </article>
+
+          <article class="blog-card js-reveal" data-delay="200" data-category="tax-tips">
+            <div class="blog-card__thumb" style="background-image:url('assets/blog-home-office.jpg');background-size:cover;background-position:center;">
+            </div>
+            <div class="blog-card__body">
+              <span class="blog-card__tag">Tax Tips</span>
+              <h3 class="blog-card__title">Home Office Deductions: What You Can and Can't Claim</h3>
+              <p class="blog-card__excerpt">Working from home? The ATO has specific rules about what qualifies as a home office deduction. We explain the fixed-rate and actual-cost methods so you claim correctly.</p>
+              <div class="blog-card__meta">
+                <span><i class="far fa-calendar" aria-hidden="true"></i> 18 Dec 2024</span>
+                <a href="blog-home-office.html" class="blog-card__read-more">Read More →</a>
+              </div>
+            </div>
+          </article>
+
+        </div>
+      </div>
+    </section>
+
+    <!-- NEWSLETTER -->
+    <section class="newsletter-band">
+      <div class="container">
+        <h2 class="newsletter-band__title js-reveal">Get tax tips in your inbox</h2>
+        <p class="newsletter-band__subtitle js-reveal">Join 500+ Gold Coast &amp; Brisbane business owners who stay informed with our monthly insights.</p>
+        <form class="newsletter-form js-reveal" data-delay="100" aria-label="Newsletter signup" novalidate>
+          <input type="email" class="newsletter-form__input" placeholder="your@email.com" aria-label="Email address" required>
+          <button type="submit" class="newsletter-form__btn">Subscribe →</button>
+        </form>
+      </div>
+    </section>
+
+  </main>
+
+  <footer id="site-footer" class="site-footer">
+    <div class="footer-inner container">
+      <div class="footer-brand">
+        <img src="assets/cysaccounts_logo.png" alt="CYS Accountants" class="footer-logo" loading="lazy">
+        <p class="footer-tagline">Tax, accounting and business services<br>for Gold Coast &amp; Brisbane.</p>
+      </div>
+      <div class="footer-col">
+        <p class="footer-col__heading">Navigation</p>
+        <ul class="footer-nav">
+          <li><a href="index.html">Home</a></li>
+          <li><a href="services.html">Services</a></li>
+          <li><a href="about.html">About Us</a></li>
+          <li><a href="blog.html">Blog</a></li>
+          <li><a href="contact.html">Contact</a></li>
+        </ul>
+      </div>
+      <div class="footer-col">
+        <p class="footer-col__heading">Contact</p>
+        <ul class="footer-contact-list">
+          <li><a href="tel:+61755030366">(+61 7) 5503 0366</a></li>
+          <li><a href="mailto:info@cysaccountants.com">info@cysaccountants.com</a></li>
+          <li>Southport QLD 4215</li>
+          <li>Mon–Fri: 9am – 5pm</li>
+        </ul>
+      </div>
+    </div>
+    <div class="footer-base">
+      <div class="container">
+        <p>&copy; 2025 CYS Accountants. All rights reserved.</p>
+      </div>
+    </div>
+  </footer>
+
+  <button id="scroll-top" aria-label="Back to top" title="Back to top">
+    <i class="fas fa-chevron-up" aria-hidden="true"></i>
+  </button>
+
+  <script src="script.js"></script>
+</body>
+</html>

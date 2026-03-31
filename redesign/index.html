@@ -43,7 +43,7 @@
   <header id="site-header" class="site-header site-header--transparent">
     <div class="nav-inner">
 
-      <a href="#hero" class="nav-logo" aria-label="CYS Accountants — home">
+      <a href="index.html" class="nav-logo" aria-label="CYS Accountants — home">
         <img src="assets/cysaccounts_logo.png" alt="CYS Accountants" class="nav-logo__img">
       </a>
 
@@ -55,11 +55,23 @@
 
       <nav class="nav-menu" id="nav-menu" aria-label="Primary navigation">
         <ul class="nav-list">
-          <li class="nav-item"><a href="#hero"     class="nav-link">Home</a></li>
-          <li class="nav-item"><a href="#services" class="nav-link">Services</a></li>
-          <li class="nav-item"><a href="#about"    class="nav-link">About Us</a></li>
-          <li class="nav-item"><a href="#contact"  class="nav-link">Contact</a></li>
+          <li class="nav-item"><a href="index.html" class="nav-link">Home</a></li>
+          <li class="nav-item nav-item--has-dropdown">
+            <a href="services.html" class="nav-link nav-link--has-dropdown">Services <i class="fas fa-chevron-down nav-chevron" aria-hidden="true"></i></a>
+            <div class="nav-dropdown" role="menu">
+              <a href="services.html" class="nav-dropdown__item nav-dropdown__item--all" role="menuitem">All Services</a>
+              <div class="nav-dropdown__divider"></div>
+              <a href="service-business-advisory.html" class="nav-dropdown__item" role="menuitem">Business Advisory &amp; Tax</a>
+              <a href="service-tax-returns.html"        class="nav-dropdown__item" role="menuitem">Income Tax Returns</a>
+              <a href="service-corporate-compliance.html" class="nav-dropdown__item" role="menuitem">Corporate Compliance</a>
+              <a href="service-bookkeeping.html"        class="nav-dropdown__item" role="menuitem">Bookkeeping</a>
+            </div>
+          </li>
+          <li class="nav-item"><a href="about.html"   class="nav-link">About</a></li>
+          <li class="nav-item"><a href="blog.html"    class="nav-link">Blog</a></li>
+          <li class="nav-item"><a href="contact.html" class="nav-link">Contact</a></li>
         </ul>
+        <a href="contact.html" class="nav-cta">Get In Touch →</a>
       </nav>
 
     </div>
@@ -97,22 +109,22 @@
       <!-- Stats bar -->
       <div class="hero-stats reveal-up reveal-up--d4" aria-label="Key statistics">
         <div class="hero-stat">
-          <span class="hero-stat__number">200+</span>
+          <span class="hero-stat__number" data-count="200" data-suffix="+">200+</span>
           <span class="hero-stat__label">Clients Served</span>
         </div>
         <div class="hero-stat__divider" aria-hidden="true"></div>
         <div class="hero-stat">
-          <span class="hero-stat__number">10+</span>
+          <span class="hero-stat__number" data-count="10" data-suffix="+">10+</span>
           <span class="hero-stat__label">Years Experience</span>
         </div>
         <div class="hero-stat__divider" aria-hidden="true"></div>
         <div class="hero-stat">
-          <span class="hero-stat__number">24h</span>
+          <span class="hero-stat__number" data-count="24" data-suffix="h">24h</span>
           <span class="hero-stat__label">Response Time</span>
         </div>
         <div class="hero-stat__divider" aria-hidden="true"></div>
         <div class="hero-stat">
-          <span class="hero-stat__number">5.0</span>
+          <span class="hero-stat__number" data-count="5" data-suffix="" data-decimals="1">5.0</span>
           <span class="hero-stat__label">Google Rating</span>
         </div>
       </div>
@@ -122,8 +134,47 @@
     <!-- ═══════════════════════════════════════════
          SERVICES
     ═══════════════════════════════════════════ -->
-    <section id="services" class="section-services">
+    <section id="services" class="section-services" data-symbols="light">
       <div class="services-deco" aria-hidden="true"></div>
+
+      <!-- Top ticker -->
+      <div class="services-ticker services-ticker--top" aria-hidden="true">
+        <div class="services-ticker__track">
+          <span class="services-ticker__item">Tax Returns</span><span class="services-ticker__sep">◆</span>
+          <span class="services-ticker__item">BAS Lodgement</span><span class="services-ticker__sep">◆</span>
+          <span class="services-ticker__item">GST</span><span class="services-ticker__sep">◆</span>
+          <span class="services-ticker__item">Business Advisory</span><span class="services-ticker__sep">◆</span>
+          <span class="services-ticker__item">Bookkeeping</span><span class="services-ticker__sep">◆</span>
+          <span class="services-ticker__item">Payroll</span><span class="services-ticker__sep">◆</span>
+          <span class="services-ticker__item">Superannuation</span><span class="services-ticker__sep">◆</span>
+          <span class="services-ticker__item">ASIC Compliance</span><span class="services-ticker__sep">◆</span>
+          <span class="services-ticker__item">Xero</span><span class="services-ticker__sep">◆</span>
+          <span class="services-ticker__item">QuickBooks</span><span class="services-ticker__sep">◆</span>
+          <span class="services-ticker__item">MYOB</span><span class="services-ticker__sep">◆</span>
+          <span class="services-ticker__item">Financial Reporting</span><span class="services-ticker__sep">◆</span>
+          <span class="services-ticker__item">Corporate Compliance</span><span class="services-ticker__sep">◆</span>
+          <span class="services-ticker__item">Income Tax</span><span class="services-ticker__sep">◆</span>
+          <span class="services-ticker__item">ATO Liaison</span><span class="services-ticker__sep">◆</span>
+          <span class="services-ticker__item">P&amp;L Reports</span><span class="services-ticker__sep">◆</span>
+          <span class="services-ticker__item">Tax Returns</span><span class="services-ticker__sep">◆</span>
+          <span class="services-ticker__item">BAS Lodgement</span><span class="services-ticker__sep">◆</span>
+          <span class="services-ticker__item">GST</span><span class="services-ticker__sep">◆</span>
+          <span class="services-ticker__item">Business Advisory</span><span class="services-ticker__sep">◆</span>
+          <span class="services-ticker__item">Bookkeeping</span><span class="services-ticker__sep">◆</span>
+          <span class="services-ticker__item">Payroll</span><span class="services-ticker__sep">◆</span>
+          <span class="services-ticker__item">Superannuation</span><span class="services-ticker__sep">◆</span>
+          <span class="services-ticker__item">ASIC Compliance</span><span class="services-ticker__sep">◆</span>
+          <span class="services-ticker__item">Xero</span><span class="services-ticker__sep">◆</span>
+          <span class="services-ticker__item">QuickBooks</span><span class="services-ticker__sep">◆</span>
+          <span class="services-ticker__item">MYOB</span><span class="services-ticker__sep">◆</span>
+          <span class="services-ticker__item">Financial Reporting</span><span class="services-ticker__sep">◆</span>
+          <span class="services-ticker__item">Corporate Compliance</span><span class="services-ticker__sep">◆</span>
+          <span class="services-ticker__item">Income Tax</span><span class="services-ticker__sep">◆</span>
+          <span class="services-ticker__item">ATO Liaison</span><span class="services-ticker__sep">◆</span>
+          <span class="services-ticker__item">P&amp;L Reports</span><span class="services-ticker__sep">◆</span>
+        </div>
+      </div>
+
       <div class="container">
 
         <div class="section-header js-reveal">
@@ -138,6 +189,7 @@
             <div class="service-card__body">
               <h3 class="service-card__title">Business Advisory &amp; Tax Compliance</h3>
               <p class="service-card__text">We can help you plan, navigate and understand the accounting requirements and tax obligations. This includes business structure, GST, BAS, Payroll, PAYG, Superannuation and financial reporting.</p>
+              <a class="service-card__link" href="service-business-advisory.html">Learn more →</a>
             </div>
           </div>
 
@@ -146,6 +198,7 @@
             <div class="service-card__body">
               <h3 class="service-card__title">Income Tax Return</h3>
               <p class="service-card__text">We can assist you in preparing and lodging your income tax return correctly to the Australian Taxation Office. We help businesses and individuals with their simple and complex tax returns.</p>
+              <a class="service-card__link" href="service-tax-returns.html">Learn more →</a>
             </div>
           </div>
 
@@ -154,6 +207,7 @@
             <div class="service-card__body">
               <h3 class="service-card__title">Corporate Compliance</h3>
               <p class="service-card__text">We can assist your business with corporate compliance matters including ASIC compliance requirements, all registered office matters, corporate register and liaise with ASIC on your behalf.</p>
+              <a class="service-card__link" href="service-corporate-compliance.html">Learn more →</a>
             </div>
           </div>
 
@@ -162,11 +216,52 @@
             <div class="service-card__body">
               <h3 class="service-card__title">Bookkeeping Services</h3>
               <p class="service-card__text">We are Xero certified, QuickBooks Pro Advisors and MYOB experts. Our team is trained in all areas of bookkeeping and process implementation for businesses of all sizes.</p>
+              <a class="service-card__link" href="service-bookkeeping.html">Learn more →</a>
             </div>
           </div>
 
         </div>
       </div>
+
+      <!-- Infinite word ticker -->
+      <div class="services-ticker services-ticker--bottom" aria-hidden="true">
+        <div class="services-ticker__track">
+          <span class="services-ticker__item">Tax Returns</span><span class="services-ticker__sep">◆</span>
+          <span class="services-ticker__item">BAS Lodgement</span><span class="services-ticker__sep">◆</span>
+          <span class="services-ticker__item">GST</span><span class="services-ticker__sep">◆</span>
+          <span class="services-ticker__item">Business Advisory</span><span class="services-ticker__sep">◆</span>
+          <span class="services-ticker__item">Bookkeeping</span><span class="services-ticker__sep">◆</span>
+          <span class="services-ticker__item">Payroll</span><span class="services-ticker__sep">◆</span>
+          <span class="services-ticker__item">Superannuation</span><span class="services-ticker__sep">◆</span>
+          <span class="services-ticker__item">ASIC Compliance</span><span class="services-ticker__sep">◆</span>
+          <span class="services-ticker__item">Xero</span><span class="services-ticker__sep">◆</span>
+          <span class="services-ticker__item">QuickBooks</span><span class="services-ticker__sep">◆</span>
+          <span class="services-ticker__item">MYOB</span><span class="services-ticker__sep">◆</span>
+          <span class="services-ticker__item">Financial Reporting</span><span class="services-ticker__sep">◆</span>
+          <span class="services-ticker__item">Corporate Compliance</span><span class="services-ticker__sep">◆</span>
+          <span class="services-ticker__item">Income Tax</span><span class="services-ticker__sep">◆</span>
+          <span class="services-ticker__item">ATO Liaison</span><span class="services-ticker__sep">◆</span>
+          <span class="services-ticker__item">P&amp;L Reports</span><span class="services-ticker__sep">◆</span>
+          <!-- Duplicate for seamless loop -->
+          <span class="services-ticker__item">Tax Returns</span><span class="services-ticker__sep">◆</span>
+          <span class="services-ticker__item">BAS Lodgement</span><span class="services-ticker__sep">◆</span>
+          <span class="services-ticker__item">GST</span><span class="services-ticker__sep">◆</span>
+          <span class="services-ticker__item">Business Advisory</span><span class="services-ticker__sep">◆</span>
+          <span class="services-ticker__item">Bookkeeping</span><span class="services-ticker__sep">◆</span>
+          <span class="services-ticker__item">Payroll</span><span class="services-ticker__sep">◆</span>
+          <span class="services-ticker__item">Superannuation</span><span class="services-ticker__sep">◆</span>
+          <span class="services-ticker__item">ASIC Compliance</span><span class="services-ticker__sep">◆</span>
+          <span class="services-ticker__item">Xero</span><span class="services-ticker__sep">◆</span>
+          <span class="services-ticker__item">QuickBooks</span><span class="services-ticker__sep">◆</span>
+          <span class="services-ticker__item">MYOB</span><span class="services-ticker__sep">◆</span>
+          <span class="services-ticker__item">Financial Reporting</span><span class="services-ticker__sep">◆</span>
+          <span class="services-ticker__item">Corporate Compliance</span><span class="services-ticker__sep">◆</span>
+          <span class="services-ticker__item">Income Tax</span><span class="services-ticker__sep">◆</span>
+          <span class="services-ticker__item">ATO Liaison</span><span class="services-ticker__sep">◆</span>
+          <span class="services-ticker__item">P&amp;L Reports</span><span class="services-ticker__sep">◆</span>
+        </div>
+      </div>
+
     </section>
 
     <!-- ═══════════════════════════════════════════
@@ -191,6 +286,7 @@
           <p>Our tax Accountants and Tax Consultants are highly qualified from Australian universities and are passionate individuals with a drive and a will to help you with your tax related matters.</p>
           <p>We are dedicated to ensure that your requirements are strategically planned and aligned with your long-term goals.</p>
           </div><!-- /.about-body -->
+          <a href="about.html" class="btn-text js-reveal" data-delay="100">Our full story →</a>
         </div><!-- /.about-left -->
 
         <div class="credentials-strip">
@@ -335,6 +431,108 @@
     </section>
 
     <!-- ═══════════════════════════════════════════
+         HOW IT WORKS
+    ═══════════════════════════════════════════ -->
+    <section class="section-how">
+      <div class="container">
+
+        <div class="section-header js-reveal">
+          <span class="section-eyebrow">Our Process</span>
+          <h2 class="section-title">How It Works</h2>
+        </div>
+
+        <div class="how-grid">
+
+          <div class="how-step js-reveal" data-delay="0">
+            <span class="how-step__number" aria-hidden="true">01</span>
+            <div class="how-step__icon" aria-hidden="true"><i class="fas fa-comments"></i></div>
+            <h3 class="how-step__title">Free Consultation</h3>
+            <p class="how-step__text">We start with a no-obligation conversation to understand your situation, goals and what you need help with. No forms, no pressure.</p>
+          </div>
+
+          <div class="how-step js-reveal" data-delay="120">
+            <span class="how-step__number" aria-hidden="true">02</span>
+            <div class="how-step__icon" aria-hidden="true"><i class="fas fa-clipboard-list"></i></div>
+            <h3 class="how-step__title">Tailored Plan</h3>
+            <p class="how-step__text">We put together a clear plan and fixed-fee quote based on your needs — so you always know exactly what you'll pay before we start.</p>
+          </div>
+
+          <div class="how-step js-reveal" data-delay="240">
+            <span class="how-step__number" aria-hidden="true">03</span>
+            <div class="how-step__icon" aria-hidden="true"><i class="fas fa-check-circle"></i></div>
+            <h3 class="how-step__title">We Handle the Rest</h3>
+            <p class="how-step__text">Sit back while our team takes care of everything — lodgements, compliance, returns and advisory — keeping you informed every step of the way.</p>
+          </div>
+
+        </div>
+      </div>
+    </section>
+
+    <!-- ═══════════════════════════════════════════
+         RECENT INSIGHTS
+    ═══════════════════════════════════════════ -->
+    <section class="section-insights" data-dots="light">
+      <div class="container">
+
+        <div class="section-header js-reveal">
+          <span class="section-eyebrow">From the Blog</span>
+          <h2 class="section-title">Recent Insights</h2>
+        </div>
+
+        <div class="insights-grid">
+
+          <article class="blog-card js-reveal" data-delay="0">
+            <div class="blog-card__thumb" style="background-image:url('assets/blog-eofy.jpg');background-size:cover;background-position:center;">
+            </div>
+            <div class="blog-card__body">
+              <span class="blog-card__tag">Tax Tips</span>
+              <h3 class="blog-card__title">EOFY Tax Checklist for Small Businesses 2025</h3>
+              <p class="blog-card__excerpt">Everything you need to capture before 30 June — deductions, reconciliations and key ATO deadlines.</p>
+              <div class="blog-card__meta">
+                <span><i class="far fa-calendar" aria-hidden="true"></i> 30 June 2025</span>
+                <a href="blog.html" class="blog-card__read-more">Read More →</a>
+              </div>
+            </div>
+          </article>
+
+          <article class="blog-card js-reveal" data-delay="120">
+            <div class="blog-card__thumb" style="background-image:url('assets/blog-bas.jpg');background-size:cover;background-position:center;">
+            </div>
+            <div class="blog-card__body">
+              <span class="blog-card__tag">Tax Tips</span>
+              <h3 class="blog-card__title">What Is BAS and When Do You Need to Lodge It?</h3>
+              <p class="blog-card__excerpt">A plain-English guide to Business Activity Statements — what they cover, when they're due and what happens if you miss one.</p>
+              <div class="blog-card__meta">
+                <span><i class="far fa-calendar" aria-hidden="true"></i> 28 Apr 2025</span>
+                <a href="blog.html" class="blog-card__read-more">Read More →</a>
+              </div>
+            </div>
+          </article>
+
+          <article class="blog-card js-reveal" data-delay="240">
+            <div class="blog-card__thumb" style="background-image:url('assets/blog-structure.jpg');background-size:cover;background-position:center;">
+            </div>
+            <div class="blog-card__body">
+              <span class="blog-card__tag">Business</span>
+              <h3 class="blog-card__title">Sole Trader vs Company: Which Structure Is Right for You?</h3>
+              <p class="blog-card__excerpt">Comparing tax implications, liability and admin overhead so you can choose the structure that suits your goals.</p>
+              <div class="blog-card__meta">
+                <span><i class="far fa-calendar" aria-hidden="true"></i> 10 Mar 2025</span>
+                <a href="blog.html" class="blog-card__read-more">Read More →</a>
+              </div>
+            </div>
+          </article>
+
+        </div>
+
+        <div class="insights-cta js-reveal">
+          <a href="blog.html" class="btn-primary">View All Articles →</a>
+        </div>
+
+      </div>
+    </section>
+
+    <!-- ═══════════════════════════════════════════
          CONTACT
     ═══════════════════════════════════════════ -->
     <section id="contact" class="section-contact">
@@ -450,6 +648,22 @@
   </main>
 
   <!-- ═══════════════════════════════════════════
+       MAP
+  ═══════════════════════════════════════════ -->
+  <div class="site-map-strip">
+    <iframe
+      title="CYS Accountants office location"
+      src="https://maps.google.com/maps?q=56+Scarborough+St,+Southport+QLD+4215,+Australia&output=embed"
+      width="100%"
+      height="320"
+      style="border:0;display:block;"
+      allowfullscreen=""
+      loading="lazy"
+      referrerpolicy="no-referrer-when-downgrade">
+    </iframe>
+  </div>
+
+  <!-- ═══════════════════════════════════════════
        FOOTER
   ═══════════════════════════════════════════ -->
   <footer id="site-footer" class="site-footer">
@@ -463,10 +677,11 @@
       <div class="footer-col">
         <p class="footer-col__heading">Navigation</p>
         <ul class="footer-nav">
-          <li><a href="#hero">Home</a></li>
-          <li><a href="#services">Services</a></li>
-          <li><a href="#about">About Us</a></li>
-          <li><a href="#contact">Contact</a></li>
+          <li><a href="index.html">Home</a></li>
+          <li><a href="services.html">Services</a></li>
+          <li><a href="about.html">About Us</a></li>
+          <li><a href="blog.html">Blog</a></li>
+          <li><a href="contact.html">Contact</a></li>
         </ul>
       </div>
 

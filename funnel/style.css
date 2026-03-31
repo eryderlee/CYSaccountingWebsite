@@ -1,0 +1,702 @@
+/* ══════════════════════════════════════════════════════════════════
+   CYS Accountants — Funnel Page Styles
+   ══════════════════════════════════════════════════════════════════ */
+
+/* ── 1. Brand Variables ────────────────────────────────────────── */
+:root {
+  --color-navy:        #202a44;
+  --color-navy-dark:   #161e32;
+  --color-teal:        #54dec5;
+  --color-teal-dark:   #3ec4ad;
+  --color-white:       #ffffff;
+  --color-light-gray:  #f5f7fa;
+  --color-mid-gray:    #e8eaed;
+  --color-text-dark:   #1f252b;
+  --color-text-mid:    #5a6270;
+  --color-error:       #e05454;
+
+  --font-heading: 'Montserrat', sans-serif;
+  --font-body:    'Roboto', sans-serif;
+
+  --radius-sm:   4px;
+  --radius-md:   8px;
+  --radius-lg:   14px;
+  --radius-pill: 999px;
+
+  --shadow-card:  0 4px 28px rgba(0,0,0,0.07);
+  --shadow-hover: 0 12px 40px rgba(0,0,0,0.13);
+
+  --ease-out: cubic-bezier(0.22, 1, 0.36, 1);
+
+  --container-max: 1100px;
+  --container-pad: clamp(20px, 5vw, 60px);
+}
+
+/* ── 2. Reset & Base ───────────────────────────────────────────── */
+*, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
+
+html { scroll-behavior: smooth; }
+
+body {
+  font-family: var(--font-body);
+  color: var(--color-text-dark);
+  background: var(--color-white);
+  line-height: 1.6;
+  -webkit-font-smoothing: antialiased;
+}
+
+a { color: inherit; text-decoration: none; }
+img { display: block; max-width: 100%; }
+ul { list-style: none; }
+
+/* ── 3. Layout Helpers ─────────────────────────────────────────── */
+.funnel-container {
+  width: 100%;
+  max-width: var(--container-max);
+  margin-inline: auto;
+  padding-inline: var(--container-pad);
+}
+
+.funnel-container--narrow {
+  max-width: 760px;
+}
+
+/* ── 4. Typography Reuse ───────────────────────────────────────── */
+.section-eyebrow {
+  display: block;
+  font-family: var(--font-heading);
+  font-size: 0.72rem;
+  font-weight: 600;
+  letter-spacing: 3.5px;
+  text-transform: uppercase;
+  color: var(--color-teal-dark);
+  margin-bottom: 10px;
+}
+.section-eyebrow--teal { color: var(--color-teal); }
+
+.section-title {
+  font-family: var(--font-heading);
+  font-size: clamp(1.6rem, 3vw, 2.4rem);
+  font-weight: 700;
+  color: var(--color-navy-dark);
+  line-height: 1.15;
+}
+.section-title--white { color: var(--color-white); }
+
+/* ── 5. Buttons ────────────────────────────────────────────────── */
+.btn-primary {
+  display: inline-block;
+  background: var(--color-teal);
+  color: var(--color-navy-dark);
+  font-family: var(--font-heading);
+  font-size: 0.82rem;
+  font-weight: 700;
+  letter-spacing: 1.5px;
+  text-transform: uppercase;
+  padding: 16px 36px;
+  border-radius: var(--radius-sm);
+  transition: background 0.25s, transform 0.2s var(--ease-out);
+  white-space: nowrap;
+}
+.btn-primary:hover {
+  background: var(--color-teal-dark);
+  transform: translateY(-2px);
+}
+.btn-primary--full {
+  display: block;
+  width: 100%;
+  text-align: center;
+  padding: 18px;
+  font-size: 0.88rem;
+}
+
+.btn-outline {
+  display: inline-block;
+  background: transparent;
+  color: var(--color-white);
+  border: 2px solid rgba(255,255,255,0.5);
+  font-family: var(--font-heading);
+  font-size: 0.82rem;
+  font-weight: 700;
+  letter-spacing: 1.5px;
+  text-transform: uppercase;
+  padding: 14px 34px;
+  border-radius: var(--radius-sm);
+  transition: border-color 0.25s, background 0.25s, transform 0.2s var(--ease-out);
+  white-space: nowrap;
+}
+.btn-outline:hover {
+  border-color: var(--color-teal);
+  color: var(--color-teal);
+  transform: translateY(-2px);
+}
+
+/* ── 6. Header ─────────────────────────────────────────────────── */
+.funnel-header {
+  background: var(--color-navy);
+  padding: 16px 0;
+  position: sticky;
+  top: 0;
+  z-index: 100;
+  box-shadow: 0 2px 16px rgba(0,0,0,0.25);
+}
+
+.funnel-header__inner {
+  max-width: var(--container-max);
+  margin-inline: auto;
+  padding-inline: var(--container-pad);
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+
+.funnel-header__logo-img {
+  height: 48px;
+  width: auto;
+}
+
+.funnel-header__phone {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  color: var(--color-teal);
+  font-family: var(--font-heading);
+  font-size: 0.88rem;
+  font-weight: 600;
+  letter-spacing: 0.5px;
+  transition: color 0.2s;
+}
+.funnel-header__phone:hover { color: var(--color-teal-dark); }
+.funnel-header__phone .fa-phone-alt { font-size: 0.8rem; }
+
+/* ── 7. Hero ───────────────────────────────────────────────────── */
+.funnel-hero {
+  position: relative;
+  background: linear-gradient(135deg, var(--color-navy-dark) 0%, var(--color-navy) 60%, rgba(84,222,197,0.12) 100%);
+  padding-block: clamp(72px, 10vw, 120px);
+  text-align: center;
+  overflow: hidden;
+}
+
+.funnel-hero::before {
+  content: '';
+  position: absolute;
+  inset: 0;
+  background:
+    radial-gradient(ellipse 60% 50% at 80% 20%, rgba(84,222,197,0.07) 0%, transparent 70%),
+    radial-gradient(ellipse 40% 60% at 20% 80%, rgba(84,222,197,0.05) 0%, transparent 70%);
+  pointer-events: none;
+}
+
+.funnel-hero__overlay { display: none; }
+
+.funnel-hero__content {
+  position: relative;
+  z-index: 1;
+  max-width: var(--container-max);
+  margin-inline: auto;
+  padding-inline: var(--container-pad);
+}
+
+.funnel-eyebrow {
+  display: inline-flex;
+  align-items: center;
+  gap: 8px;
+  background: rgba(84,222,197,0.12);
+  border: 1px solid rgba(84,222,197,0.3);
+  color: var(--color-teal);
+  font-family: var(--font-heading);
+  font-size: 0.72rem;
+  font-weight: 600;
+  letter-spacing: 2.5px;
+  text-transform: uppercase;
+  padding: 7px 16px;
+  border-radius: var(--radius-pill);
+  margin-bottom: 24px;
+}
+
+.funnel-hero__title {
+  font-family: var(--font-heading);
+  font-size: clamp(2rem, 5vw, 3.4rem);
+  font-weight: 700;
+  color: var(--color-white);
+  line-height: 1.1;
+  margin-bottom: 20px;
+  text-shadow: 0 2px 20px rgba(0,0,0,0.25);
+}
+
+.funnel-hero__sub {
+  font-size: clamp(1rem, 1.8vw, 1.2rem);
+  color: rgba(255,255,255,0.78);
+  max-width: 540px;
+  margin: 0 auto 36px;
+  line-height: 1.6;
+}
+
+.funnel-hero__ctas {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 16px;
+  flex-wrap: wrap;
+  margin-bottom: 36px;
+}
+
+.funnel-trust {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 12px;
+  flex-wrap: wrap;
+  font-size: 0.82rem;
+  color: rgba(255,255,255,0.65);
+}
+
+.funnel-trust__item {
+  display: flex;
+  align-items: center;
+  gap: 5px;
+}
+
+.funnel-trust__item .fa-star { color: #f9c533; font-size: 0.72rem; }
+.funnel-trust__sep { opacity: 0.35; }
+
+/* ── 8. Benefits Section ───────────────────────────────────────── */
+.funnel-benefits {
+  background: var(--color-navy-dark);
+  padding-block: clamp(64px, 8vw, 100px);
+  position: relative;
+  overflow: hidden;
+}
+
+.funnel-benefits::before {
+  content: '';
+  position: absolute;
+  top: 0; right: 0;
+  width: 300px; height: 300px;
+  background: radial-gradient(circle, rgba(84,222,197,0.07) 0%, transparent 70%);
+  pointer-events: none;
+}
+
+.funnel-section-header {
+  margin-bottom: clamp(36px, 5vw, 56px);
+  text-align: center;
+}
+
+.funnel-section-header--light .section-eyebrow { color: var(--color-teal-dark); }
+.funnel-section-header--light .section-title { color: var(--color-navy-dark); }
+
+.funnel-section-sub {
+  margin-top: 12px;
+  color: var(--color-text-mid);
+  font-size: 1rem;
+  max-width: 520px;
+  margin-inline: auto;
+}
+
+.funnel-benefits .funnel-section-header { position: relative; z-index: 1; }
+
+.funnel-benefits__grid {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: clamp(16px, 3vw, 32px);
+  position: relative;
+  z-index: 1;
+}
+
+.funnel-benefit-card {
+  background: rgba(255,255,255,0.05);
+  border: 1px solid rgba(255,255,255,0.08);
+  border-radius: var(--radius-lg);
+  padding: clamp(24px, 3vw, 36px);
+  text-align: center;
+  transition: background 0.3s, transform 0.3s var(--ease-out), border-color 0.3s;
+}
+.funnel-benefit-card:hover {
+  background: rgba(255,255,255,0.09);
+  transform: translateY(-4px);
+  border-color: rgba(84,222,197,0.25);
+}
+
+.funnel-benefit-card__icon {
+  width: 60px;
+  height: 60px;
+  background: var(--color-teal);
+  color: var(--color-navy-dark);
+  border-radius: var(--radius-md);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 1.4rem;
+  margin: 0 auto 18px;
+}
+
+.funnel-benefit-card__title {
+  font-family: var(--font-heading);
+  font-size: 0.88rem;
+  font-weight: 700;
+  text-transform: uppercase;
+  letter-spacing: 1.2px;
+  color: var(--color-white);
+  margin-bottom: 10px;
+}
+
+.funnel-benefit-card__text {
+  font-size: 0.88rem;
+  color: rgba(255,255,255,0.62);
+  line-height: 1.65;
+}
+
+/* ── 9. Form Section ───────────────────────────────────────────── */
+.funnel-form-section {
+  background: var(--color-light-gray);
+  padding-block: clamp(64px, 8vw, 100px);
+}
+
+.funnel-form-wrap {
+  background: var(--color-white);
+  border-radius: var(--radius-lg);
+  padding: clamp(32px, 5vw, 56px);
+  box-shadow: var(--shadow-card);
+}
+
+.funnel-form__row {
+  margin-bottom: 20px;
+}
+
+.funnel-form__row--two {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 20px;
+}
+
+.funnel-form__group {
+  display: flex;
+  flex-direction: column;
+  gap: 6px;
+}
+
+.funnel-form__label {
+  font-family: var(--font-heading);
+  font-size: 0.75rem;
+  font-weight: 600;
+  letter-spacing: 0.5px;
+  text-transform: uppercase;
+  color: var(--color-text-dark);
+}
+
+.req { color: var(--color-teal-dark); }
+.funnel-form__optional { font-weight: 400; text-transform: none; letter-spacing: 0; color: var(--color-text-mid); font-size: 0.72rem; }
+
+.funnel-form__input {
+  width: 100%;
+  padding: 13px 16px;
+  border: 1.5px solid var(--color-mid-gray);
+  border-radius: var(--radius-sm);
+  font-family: var(--font-body);
+  font-size: 0.95rem;
+  color: var(--color-text-dark);
+  background: var(--color-white);
+  transition: border-color 0.2s, box-shadow 0.2s;
+  appearance: none;
+}
+
+.funnel-form__input:focus {
+  outline: none;
+  border-color: var(--color-teal);
+  box-shadow: 0 0 0 3px rgba(84,222,197,0.18);
+}
+
+.funnel-form__input.is-error {
+  border-color: var(--color-error);
+  box-shadow: 0 0 0 3px rgba(224,84,84,0.12);
+}
+
+.funnel-form__select {
+  background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='12' height='8' viewBox='0 0 12 8'%3E%3Cpath d='M1 1l5 5 5-5' stroke='%235a6270' stroke-width='1.5' fill='none' stroke-linecap='round'/%3E%3C/svg%3E");
+  background-repeat: no-repeat;
+  background-position: right 14px center;
+  padding-right: 40px;
+  cursor: pointer;
+}
+
+.funnel-form__textarea {
+  resize: vertical;
+  min-height: 100px;
+}
+
+.funnel-form__footer {
+  margin-top: 28px;
+}
+
+.funnel-form__privacy {
+  margin-top: 12px;
+  font-size: 0.78rem;
+  color: var(--color-text-mid);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 6px;
+}
+.funnel-form__privacy .fa-lock { font-size: 0.72rem; color: var(--color-teal-dark); }
+
+/* Form success */
+.form-success {
+  text-align: center;
+  padding: 48px 24px;
+}
+
+.form-success__icon {
+  font-size: 3rem;
+  color: var(--color-teal-dark);
+  margin-bottom: 16px;
+}
+
+.form-success__title {
+  font-family: var(--font-heading);
+  font-size: 1.5rem;
+  font-weight: 700;
+  color: var(--color-navy-dark);
+  margin-bottom: 12px;
+}
+
+.form-success__text {
+  color: var(--color-text-mid);
+  font-size: 0.95rem;
+  line-height: 1.7;
+  max-width: 480px;
+  margin: 0 auto 10px;
+}
+
+.form-success__text a {
+  color: var(--color-teal-dark);
+  text-decoration: underline;
+}
+
+/* ── 10. Booking Section ───────────────────────────────────────── */
+.funnel-booking-section {
+  background: var(--color-white);
+  padding-block: clamp(64px, 8vw, 100px);
+  border-top: 1px solid var(--color-mid-gray);
+}
+
+.funnel-calendar-placeholder {
+  border: 2px dashed var(--color-mid-gray);
+  border-radius: var(--radius-lg);
+  padding: clamp(40px, 6vw, 72px) 32px;
+}
+
+.funnel-calendar-placeholder__inner {
+  text-align: center;
+  max-width: 420px;
+  margin-inline: auto;
+}
+
+.funnel-calendar-placeholder__icon {
+  font-size: 3rem;
+  color: var(--color-teal-dark);
+  opacity: 0.5;
+  margin-bottom: 20px;
+}
+
+.funnel-calendar-placeholder__title {
+  font-family: var(--font-heading);
+  font-size: 1.1rem;
+  font-weight: 700;
+  color: var(--color-navy-dark);
+  margin-bottom: 10px;
+}
+
+.funnel-calendar-placeholder__text {
+  color: var(--color-text-mid);
+  font-size: 0.92rem;
+  margin-bottom: 24px;
+}
+
+.funnel-calendar-placeholder__contacts {
+  display: flex;
+  flex-direction: column;
+  gap: 12px;
+  margin-bottom: 20px;
+}
+
+.funnel-contact-btn {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 10px;
+  padding: 14px 24px;
+  border-radius: var(--radius-sm);
+  font-family: var(--font-heading);
+  font-size: 0.82rem;
+  font-weight: 700;
+  letter-spacing: 1px;
+  text-transform: uppercase;
+  background: var(--color-teal);
+  color: var(--color-navy-dark);
+  transition: background 0.25s, transform 0.2s var(--ease-out);
+}
+.funnel-contact-btn:hover {
+  background: var(--color-teal-dark);
+  transform: translateY(-2px);
+}
+
+.funnel-contact-btn--outline {
+  background: transparent;
+  border: 2px solid var(--color-mid-gray);
+  color: var(--color-text-dark);
+}
+.funnel-contact-btn--outline:hover {
+  border-color: var(--color-teal);
+  color: var(--color-teal-dark);
+  background: transparent;
+  transform: translateY(-2px);
+}
+
+.funnel-calendar-placeholder__hours {
+  font-size: 0.78rem;
+  color: var(--color-text-mid);
+}
+
+/* ── 11. Social Proof ──────────────────────────────────────────── */
+.funnel-proof {
+  background: var(--color-navy-dark);
+  padding-block: clamp(64px, 8vw, 100px);
+}
+
+.funnel-proof__grid {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: clamp(16px, 3vw, 28px);
+}
+
+.funnel-review-card {
+  background: rgba(255,255,255,0.05);
+  border: 1px solid rgba(255,255,255,0.08);
+  border-radius: var(--radius-lg);
+  padding: 28px 24px;
+}
+
+.funnel-review-card__stars {
+  color: #f9c533;
+  font-size: 0.85rem;
+  letter-spacing: 2px;
+  margin-bottom: 14px;
+}
+
+.funnel-review-card__text {
+  font-size: 0.9rem;
+  color: rgba(255,255,255,0.72);
+  line-height: 1.7;
+  font-style: italic;
+  margin-bottom: 14px;
+}
+
+.funnel-review-card__author {
+  font-family: var(--font-heading);
+  font-size: 0.72rem;
+  font-weight: 600;
+  text-transform: uppercase;
+  letter-spacing: 1px;
+  color: var(--color-teal);
+}
+
+/* ── 12. Final CTA Band ────────────────────────────────────────── */
+.funnel-cta-band {
+  background: linear-gradient(135deg, var(--color-navy) 0%, var(--color-navy-dark) 100%);
+  padding-block: clamp(56px, 7vw, 88px);
+  text-align: center;
+}
+
+.funnel-cta-band__title {
+  font-family: var(--font-heading);
+  font-size: clamp(1.3rem, 2.5vw, 1.9rem);
+  font-weight: 700;
+  color: var(--color-white);
+  margin-bottom: 28px;
+}
+
+.funnel-cta-band__btns {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 16px;
+  flex-wrap: wrap;
+}
+
+/* ── 13. Footer ────────────────────────────────────────────────── */
+.funnel-footer {
+  background: var(--color-navy-dark);
+  border-top: 1px solid rgba(255,255,255,0.07);
+}
+
+.funnel-footer__inner {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 40px;
+  padding-block: 48px 32px;
+  align-items: start;
+}
+
+.funnel-footer__logo {
+  height: 48px;
+  width: auto;
+  margin-bottom: 12px;
+}
+
+.funnel-footer__tagline {
+  font-size: 0.85rem;
+  color: rgba(255,255,255,0.55);
+  line-height: 1.6;
+}
+
+.funnel-footer__contact {
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+}
+
+.funnel-footer__contact p {
+  display: flex;
+  align-items: flex-start;
+  gap: 10px;
+  font-size: 0.88rem;
+  color: rgba(255,255,255,0.65);
+}
+
+.funnel-footer__contact i {
+  color: var(--color-teal-dark);
+  margin-top: 3px;
+  flex-shrink: 0;
+  width: 14px;
+}
+
+.funnel-footer__contact a:hover { color: var(--color-teal); }
+
+.funnel-footer__base {
+  border-top: 1px solid rgba(255,255,255,0.07);
+  padding-block: 16px;
+}
+
+.funnel-footer__base p {
+  font-size: 0.78rem;
+  color: rgba(255,255,255,0.35);
+  text-align: center;
+}
+
+/* ── 14. Responsive ────────────────────────────────────────────── */
+@media (max-width: 820px) {
+  .funnel-benefits__grid { grid-template-columns: 1fr; max-width: 440px; margin-inline: auto; }
+  .funnel-proof__grid    { grid-template-columns: 1fr; max-width: 480px; margin-inline: auto; }
+  .funnel-footer__inner  { grid-template-columns: 1fr; gap: 28px; }
+}
+
+@media (max-width: 600px) {
+  .funnel-form__row--two { grid-template-columns: 1fr; }
+  .funnel-hero__ctas     { flex-direction: column; align-items: stretch; }
+  .funnel-cta-band__btns { flex-direction: column; align-items: stretch; max-width: 320px; margin-inline: auto; }
+  .btn-primary, .btn-outline { text-align: center; }
+  .funnel-trust          { gap: 8px; font-size: 0.76rem; }
+  .funnel-trust__sep     { display: none; }
+  .funnel-trust__item    { justify-content: center; }
+}
