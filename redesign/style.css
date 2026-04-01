@@ -311,6 +311,8 @@ body.cursor-hover #cursor-ring {
 }
 
 /* Hamburger */
+.nav-close { display: none; }
+
 .nav-hamburger {
   display: none;
   flex-direction: column;
