@@ -1243,7 +1243,7 @@ body.cursor-hover #cursor-ring {
   /* CTA pinned to bottom */
   .nav-cta {
     display: block;
-    text-align: center;
+    text-align: left;
     margin-top: auto;
     margin-left: 0;
     padding-top: 28px;
